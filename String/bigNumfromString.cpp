@@ -1,10 +1,11 @@
-#include<bits/stdc++.h>    
-#include<algorithm>
+#include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
-int main(){
+int main()
+{
     string sample;
-    cin>>sample;
-    sort(sample.begin(),sample.end(),greater<int>());
-    cout<<stoi(sample);
+    cin >> sample;
+    sort(sample.begin(), sample.end(), greater<int>());
+    cout << stoi(sample);
     return 0;
 }
