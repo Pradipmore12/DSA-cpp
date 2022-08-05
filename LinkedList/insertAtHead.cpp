@@ -28,7 +28,7 @@ void print(Node *&head)
         cout << temp->data << " ";
         temp = temp->next;
     }
-    cout<< endl;
+    cout << endl;
 }
 int main()
 {
