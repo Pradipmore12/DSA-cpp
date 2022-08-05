@@ -23,9 +23,9 @@ void insertAtHead(Node *&head, int data)
 void print(Node *&head)
 {
     Node *temp = head;
-    while (head != NULL)
+    while (temp != NULL)
     {
-        cout << temp->data;
+        cout << temp->data<<" ";
         temp = temp->next;
     }
 }
