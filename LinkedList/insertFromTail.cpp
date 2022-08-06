@@ -43,8 +43,8 @@ int main(){
 
     
     print(head);
-    //deleteAtTail(head,tail);
-    //print(head);
+    deleteAtTail(head,tail);
+    print(head);
     
     
 
