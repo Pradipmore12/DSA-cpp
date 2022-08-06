@@ -43,11 +43,12 @@ int main()
     Node *node1 = new Node(10);
     Node *tail = node1;
     Node *head = node1;
+
     insertAtTail(tail, 40);
     insertAtTail(tail, 50);
     insertAtTail(tail, 60);
     insertAtTail(tail, 70);
-
+    
     print(head);
     deleteAtTail(head, tail);
     print(head);
