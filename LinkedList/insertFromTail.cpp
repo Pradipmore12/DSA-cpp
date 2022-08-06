@@ -30,16 +30,16 @@ void insertAtTail(Node *&tail, int data)
 }
 void deleteAtTail(Node *&head, Node *&tail)
 {
-    //take the head node
+    // take the head node
     Node *temp = head;
     while (temp->next != tail)
     {
-        //here you will get the node prev to tail node
+        // here you will get the node prev to tail node
         temp = temp->next;
     }
-    //change pointer of previous of tail node to NULL
+    // change pointer of previous of tail node to NULL
     temp->next = NULL;
-    //then update tail to temp
+    // then update tail to temp
     tail = temp;
 }
 int main()
@@ -52,7 +52,7 @@ int main()
     insertAtTail(tail, 50);
     insertAtTail(tail, 60);
     insertAtTail(tail, 70);
-    
+
     print(head);
     deleteAtTail(head, tail);
     print(head);
