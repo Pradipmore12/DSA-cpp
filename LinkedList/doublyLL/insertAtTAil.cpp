@@ -39,8 +39,11 @@ void insertAtHead(Node *&head, int data)
 
 void insertAtTail(Node *&tail,int data){
     Node *temp=new Node(data);
+    tail->next=temp;
+    temp->prev=tail;
+    tail=temp;
 
-    
+
 }
 int main()
 {
