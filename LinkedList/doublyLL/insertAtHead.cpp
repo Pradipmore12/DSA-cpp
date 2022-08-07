@@ -1,41 +1,44 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class Node{
-    public:
+class Node
+{
+public:
     int data;
     Node *next;
     Node *prev;
-    
-    Node(int data){
-        this->data=data;
-        this->next=NULL;
-        this->prev=NULL;
 
+    Node(int data)
+    {
+        this->data = data;
+        this->next = NULL;
+        this->prev = NULL;
     }
 };
-void print(Node *&head){
+void print(Node *&head)
+{
     Node *temp = head;
-    while(temp!=NULL){
-        cout<<temp->data<<" ";
-        temp=temp->next;
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
-void insertAtHead(Node *&head, int data){
+void insertAtHead(Node *&head, int data)
+{
     Node *temp = new Node(data);
-    temp->next=head;
-    head->prev=temp;
-    head=temp;
+    temp->next = head;
+    head->prev = temp;
+    head = temp;
 }
-int main(){
-    Node *node1=new Node(10);
-    Node *head=node1;
-    //head->prev=NULL;
+int main()
+{
+    Node *node1 = new Node(10);
+    Node *head = node1;
+    // head->prev=NULL;
     print(head);
-    insertAtHead(head,20);
+    insertAtHead(head, 20);
     print(head);
 
-
-
-    return 0;   
+    return 0;
 }
