@@ -27,8 +27,11 @@ void print(Node *&head)
 void insertAtHead(Node *&head, int data)
 {
     Node *temp = new Node(data);
+    //add your node before head Node
     temp->next = head;
+    //change prev pointer of head to temp
     head->prev = temp;
+    //update head by temp/newly created Node
     head = temp;
 }
 int main()
