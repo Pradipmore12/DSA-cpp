@@ -27,23 +27,22 @@ void print(Node *&head)
 void insertAtHead(Node *&head, int data)
 {
     Node *temp = new Node(data);
-    //add your node before head Node
+    // add your node before head Node
     temp->next = head;
-    //change prev pointer of head to temp
+    // change prev pointer of head to temp
     head->prev = temp;
-    //update head by temp/newly created Node
+    // update head by temp/newly created Node
     head = temp;
 }
 
-//Insertion at TAil
+// Insertion at TAil
 
-void insertAtTail(Node *&tail,int data){
-    Node *temp=new Node(data);
-    tail->next=temp;
-    temp->prev=tail;
-    tail=temp;
-
-
+void insertAtTail(Node *&tail, int data)
+{
+    Node *temp = new Node(data);
+    tail->next = temp;
+    temp->prev = tail;
+    tail = temp;
 }
 int main()
 {
@@ -54,7 +53,7 @@ int main()
     print(head);
     insertAtHead(head, 20);
     print(head);
-    insertAtTail(tail,30);
+    insertAtTail(tail, 30);
     print(head);
 
     return 0;
