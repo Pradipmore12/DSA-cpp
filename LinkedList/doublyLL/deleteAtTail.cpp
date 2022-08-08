@@ -12,7 +12,7 @@ class Node{
         this->prev=NULL;
     }
 };
-void print(Node *&head){
+void print(Node *head){
     Node *temp=head;
     while(temp!=NULL){
         cout<<temp->data<<" ";
@@ -20,7 +20,7 @@ void print(Node *&head){
     }
     cout<<endl;
 }
-void deleteAtTail(Node *&tail){
+void deleteAtTail(Node *tail){
     tail=tail->next;
     tail->next=NULL;
 }
