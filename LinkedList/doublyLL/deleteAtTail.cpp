@@ -20,8 +20,8 @@ void print(Node *head){
     }
     cout<<endl;
 }
-void deleteAtTail(Node *tail){
-    tail=tail->next;
+void deleteAtTail(Node *&tail){
+    tail=tail->prev;
     tail->next=NULL;
 }
 int main(){
