@@ -39,7 +39,7 @@ int main(){
 
     print(head);
     deleteAtTail(tail);
-    print(head);
+    //print(head);
 
     return 0;
 }
