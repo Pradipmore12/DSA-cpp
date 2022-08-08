@@ -24,23 +24,25 @@ void print(Node *head)
     }
     cout << endl;
 }
-void deleteAtPos(Node *&head,int pos)
+void deleteAtPos(Node *&head, int pos)
 {
-    Node *temp1=head;
-    Node *temp2=head;
-    int count=1;
-    while(count<pos-1){
-        temp1=temp1->next;
+    Node *temp1 = head;
+    Node *temp2 = head;
+    int count = 1;
+    while (count < pos - 1)
+    {
+        temp1 = temp1->next;
         count++;
     }
 
-    while(count<pos){
-        temp2=temp2->next;
+    while (count < pos)
+    {
+        temp2 = temp2->next;
         count++;
     }
 
-    temp1->next=temp2->next;
-    temp2->next->prev=temp1;
+    temp1->next = temp2->next;
+    temp2->next->prev = temp1;
 }
 
 int main()
@@ -58,7 +60,7 @@ int main()
     node3->prev = node2;
 
     print(head);
-    deleteAtPos(head,2);
+    deleteAtPos(head, 2);
     print(head);
 
     return 0;
