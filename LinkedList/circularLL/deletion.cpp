@@ -64,14 +64,15 @@ void deleteAtPos(Node *&tail, int pos)
     // we will get node at position before to pos
     temp->next = temp->next->next;
 }
-void deleteAtdata(Node *&tail,int data){
-    Node *temp=tail;
-    while(temp->next->data!=data){
-        temp=temp->next;
+void deleteAtdata(Node *&tail, int data)
+{
+    Node *temp = tail;
+    while (temp->next->data != data)
+    {
+        temp = temp->next;
     }
-    //then we will get the node with data
-    temp->next=temp->next->next;
-
+    // then we will get the node with data
+    temp->next = temp->next->next;
 }
 int main()
 {
@@ -88,9 +89,9 @@ int main()
     print(tail);
     deleteAtPos(tail, 3);
     print(tail);
-    deleteAtdata(tail,7);
+    deleteAtdata(tail, 7);
     print(tail);
-    deleteAtdata(tail,6);
+    deleteAtdata(tail, 10);
     print(tail);
 
     return 0;
