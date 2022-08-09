@@ -11,14 +11,7 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    ~Node(){
-        int val=this->data;
-        if(this->next!=NULL){
-            delete next;
-            next=NULL;
-        }
-        cout<<"memory got free deleted element is"<<val<<endl;
-    }
+   
 };
 void print(Node *&tail)
 {
@@ -69,9 +62,7 @@ void deleteAtPos(Node *&tail,int pos){
         start++;
     }
     //we will get node at position before to pos
-    Node *nodetoDelete=temp->next;
     temp->next=temp->next->next;
-    delete nodetoDelete;
 }
 int main()
 {
