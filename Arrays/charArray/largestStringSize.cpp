@@ -1,30 +1,36 @@
 using namespace std;
-#include<bits/stdc++.h>
-int main(){
+#include <bits/stdc++.h>
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
     cin.ignore();
-    char arr[n+1];
-    cin.getline(arr,n);
-    cin.ignore(); 
+    char arr[n + 1];
+    cin.getline(arr, n);
+    cin.ignore();
 
-    int currlen=0,mxlen=0;
-    int i=0;
-    while(1){
-        if(arr[i]==' '){
-            if(currlen>mxlen){
-                mxlen=currlen;
+    int currlen = 0, mxlen = 0;
+    int i = 0;
+    while (1)
+    {
+        if (arr[i] == ' ')
+        {
+            if (currlen > mxlen)
+            {
+                mxlen = currlen;
             }
         }
-        else{
+        else
+        {
             currlen++;
         }
-        if(arr[i]=='\0'){
+        if (arr[i] == '\0')
+        {
             break;
         }
         i++;
-    }  
+    }
 
-    cout<<mxlen<<endl;
+    cout << mxlen << endl;
     return 0;
 }
