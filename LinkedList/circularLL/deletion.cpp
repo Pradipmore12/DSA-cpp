@@ -11,6 +11,14 @@ public:
         this->data = data;
         this->next = NULL;
     }
+    ~Node(){
+        int val=this->data;
+        if(this->next!=NULL){
+            delete next;
+            next=NULL;
+        }
+        cout<<"memory is free for node with data"<<val<<endl;
+    }
 };
 void print(Node *&tail)
 {
@@ -63,6 +71,7 @@ void deleteAtPos(Node *&tail, int pos)
     }
     // we will get node at position before to pos
     temp->next = temp->next->next;
+    
 }
 void deleteAtdata(Node *&tail, int data)
 {
@@ -73,6 +82,10 @@ void deleteAtdata(Node *&tail, int data)
     }
     // then we will get the node with data
     temp->next = temp->next->next;
+    if(tail==temp->next){
+        tail=temp;
+    }
+    
 }
 int main()
 {
@@ -92,6 +105,8 @@ int main()
     deleteAtdata(tail, 7);
     print(tail);
     deleteAtdata(tail, 10);
+    print(tail);
+    deleteAtdata(tail, 6);
     print(tail);
 
     return 0;
