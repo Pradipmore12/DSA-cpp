@@ -1,18 +1,21 @@
 using namespace std;
-#include<iostream>
-#include<climits>
-#include<math.h>
-int main(){
+#include <iostream>
+#include <climits>
+#include <math.h>
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
     int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
     }
-    int mx=INT_MIN;
-    for(int i=0;i<n;i++){
-        mx=max(mx,arr[i]);
-        cout<<mx<<endl;
+    int mx = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        mx = max(mx, arr[i]);
+        cout << mx << endl;
     }
     return 0;
 }
