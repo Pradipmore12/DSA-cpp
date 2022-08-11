@@ -1,4 +1,4 @@
-//Bubble Sort Code C++
+// Bubble Sort Code C++
 using namespace std;
 #include <iostream>
 void bubbleSort(int arr[], int n)
