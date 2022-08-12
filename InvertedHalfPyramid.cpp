@@ -1,6 +1,7 @@
 using namespace std;
-#include<iostream>
-int main(){
+#include <iostream>
+int main()
+{
     /*int row,col;
     cin>>row>>col;
     for(int i=1;i<=row;i++){
@@ -9,15 +10,16 @@ int main(){
         }
         cout<<endl;
     }*/
-    //second method
+    // second method
     int n;
-    cin>>n;
-    for(int i=n;i>=1;i--){
-        for(int j=1;j<=i;j++){
-            cout<<"*";
-        
+    cin >> n;
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
