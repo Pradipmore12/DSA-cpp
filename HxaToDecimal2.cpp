@@ -1,3 +1,4 @@
+///hexa to decimal
 using namespace std;
 #include <bits/stdc++.h>
 #include <iostream>
