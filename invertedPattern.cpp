@@ -1,3 +1,4 @@
+//inverted Patten
 using namespace std;
 #include <iostream>
 int main()
