@@ -1,4 +1,4 @@
-//Inclusion Exclusion Priciple
+//Inclusion Exclusion Priciple Example
 #include <bits/stdc++.h>
 using namespace std;
 int incExe(int n, int a, int b)
