@@ -1,3 +1,4 @@
+//factorial of Number using Function
 using namespace std;
 #include <iostream>
 int fact(int n)
