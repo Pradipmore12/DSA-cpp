@@ -1,3 +1,4 @@
+//inverted HAlf Pyramid
 using namespace std;
 #include <iostream>
 int main()
