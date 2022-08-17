@@ -43,6 +43,7 @@ int main(){
         insertAtTail(head,tail,data);
     
     }
+    print(head);
 
         
     
