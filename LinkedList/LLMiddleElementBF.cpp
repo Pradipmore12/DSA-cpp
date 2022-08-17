@@ -41,6 +41,7 @@ int main(){
     {
         int data;
         insertAtTail(head,tail,data);
+        i++;
     
     }
     print(head);
