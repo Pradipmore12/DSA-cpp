@@ -18,16 +18,27 @@ void print(Node *&head){
     }
     cout<<endl;
 }
+void insertAtTail(Node *&tail,int data){
+    if(tail==NULL){
+        Node *temp=new Node(data);
+    }
+
+}
 int main(){
     Node *head=NULL;
     Node *tail=NULL;
     int n,i=0;
     cout<<"how many Elements"<<endl;
     cin>>n;
-    while(0<n)
+    while(i<n)
     {
-        insertAtTail(tail,)
+        int data;
+        insertAtTail(tail,data);
+    
     }
+
+        
+    
     
 
     return 0;
