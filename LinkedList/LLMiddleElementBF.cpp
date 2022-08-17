@@ -31,10 +31,10 @@ void insertAtTail(Node *&head,Node *&tail,int data){
     }
 
 }
-Node *printMiddle(Node *&head){
+int printMiddle(Node *&head){
     int count=0;
     Node *temp=head;
-    while(head!=NULL){
+    while(temp!=NULL){
         temp=temp->next;
         count++;
     }
@@ -43,9 +43,10 @@ Node *printMiddle(Node *&head){
     count=0;
     while(count<ans){
         start=start->next;
+        count++;
     }
     
-    return start;
+    return start->data;
     
 }
 int main(){
@@ -62,8 +63,8 @@ int main(){
         i++;
     
     }
-    //5print(head);
-    cout<<printMiddle(head);
+    print(head);
+    cout<<"Middle Element is :"<<printMiddle(head)<<endl;
 
         
     
