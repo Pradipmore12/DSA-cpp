@@ -40,6 +40,7 @@ int main(){
     while(i<n)
     {
         int data;
+        cin>>data;
         insertAtTail(head,tail,data);
         i++;
     
