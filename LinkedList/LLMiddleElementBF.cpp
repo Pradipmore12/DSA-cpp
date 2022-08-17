@@ -18,9 +18,16 @@ void print(Node *&head){
     }
     cout<<endl;
 }
-void insertAtTail(Node *&tail,int data){
+void insertAtTail(Node *&head,Node *&tail,int data){
+    Node *temp=new Node(data);
     if(tail==NULL){
-        Node *temp=new Node(data);
+        tail=temp;
+        head=temp;
+    }
+    else{
+        tail->next=temp;
+        tail=temp;
+
     }
 
 }
@@ -33,7 +40,7 @@ int main(){
     while(i<n)
     {
         int data;
-        insertAtTail(tail,data);
+        insertAtTail(head,tail,data);
     
     }
 
