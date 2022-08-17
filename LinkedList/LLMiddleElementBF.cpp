@@ -25,7 +25,8 @@ int main(){
     cout<<"how many Elements"<<endl;
     cin>>n;
     while(0<n)
-    {insertAtTail(tail,)
+    {
+        insertAtTail(tail,)
     }
     
 
