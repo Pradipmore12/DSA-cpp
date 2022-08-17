@@ -31,6 +31,23 @@ void insertAtTail(Node *&head,Node *&tail,int data){
     }
 
 }
+Node *printMiddle(Node *&head){
+    int count=0;
+    Node *temp=head;
+    while(head!=NULL){
+        temp=temp->next;
+        count++;
+    }
+    int ans =count/2;
+    Node *start=head;
+    count=0;
+    while(count<ans){
+        start=start->next;
+    }
+    
+    return start;
+    
+}
 int main(){
     Node *head=NULL;
     Node *tail=NULL;
@@ -45,7 +62,8 @@ int main(){
         i++;
     
     }
-    print(head);
+    //5print(head);
+    cout<<printMiddle(head);
 
         
     
