@@ -17,15 +17,25 @@ int main(){
     for(int i=0;i<k;i++){
         dupl[i]=main[i];
     }
-    //swapping last k elements in main array to first k positions
-    for(int i=n-1;i>=n-k;i--){
-        int pos=0;
-        main[pos]=main[i];
-        pos++;
+    cout<<endl<<"duplicate array"<<endl;
+    for(int i=0;i<k;i++){
+        cout<<dupl[i]<<" ";
     }
+    //swapping last k elements in main array to first k positions
+    for(int i=0;i<k;i++){
+        main[i]=main[n-1-i];
+        
+    }
+    cout<<endl<<"duplicate array"<<endl;
+    for(int i=0;i<n;i++){
+        cout << main[i] << " ";
+    }
+
+
+
     //shiftnig first k elements in main array to their kth position 
     for(int i=0;i<k;i++){
-        main[i+k-1]=dupl[i];
+        main[i+k]=dupl[i];
     }
     //printing the resulting array
     for(int i=0;i<n;i++){
