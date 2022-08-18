@@ -36,20 +36,19 @@ void inserAtTail(Node *&head,Node *&tail,int data){
 
     }
 }
-Node * reverseLL(Node *head){
+Node *reverseLL(Node *head){
     Node *curr=head;
-    Node *forward=head;
-    
+    Node *prev=NULL;
+    Node *next=NULL;
     while(curr!=NULL){
-        forward=curr->next;
+        next=curr->next;
         curr->next=curr->prev;
-        curr=forward;
-
+        curr->prev=next;
+        prev=curr;
+        curr=next;
 
     }
-    return curr;
-
-
+    return prev;
 }
 int main(){
     Node * head=NULL;
