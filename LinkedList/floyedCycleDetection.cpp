@@ -17,6 +17,19 @@ void print(Node *&head){
     }
     cout<<endl;
 }
+bool floyedCheck(Node *&head){
+    Node *slow=head;
+    Node *fast=head;
+
+    while(fast!=NULL && fast->next!=NULL && slow!=NULL){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow==fast){
+                return 1;
+            }
+    }
+    return 0;
+}
 int main(){
     Node *head=new Node(3);
     Node *node1=new Node(4);
