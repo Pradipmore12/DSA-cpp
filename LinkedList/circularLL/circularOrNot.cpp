@@ -47,19 +47,20 @@ void insertNode(Node *&tail, int element, int data)
         temp->next = nodeToInsert;
     }
 }
-bool circularOrNot(Node *&tail){
-    if(tail==NULL)
+bool circularOrNot(Node *&tail)
+{
+    if (tail == NULL)
         return true;
-    
-    Node *temp=tail->next;
-    while (temp!=NULL && temp!=tail){
-        temp=temp->next;
+
+    Node *temp = tail->next;
+    while (temp != NULL && temp != tail)
+    {
+        temp = temp->next;
     }
-    if(temp==NULL)
+    if (temp == NULL)
         return false;
-    if(temp==tail)
+    if (temp == tail)
         return true;
-    
 }
 int main()
 {
@@ -74,10 +75,10 @@ int main()
     print(tail);
     insertNode(tail, 7, 8);
     print(tail);
-    if(circularOrNot(tail))
-        cout<<"circular"<<endl;
+    if (circularOrNot(tail))
+        cout << "circular" << endl;
     else
-        cout<<"not circular"<<endl;
+        cout << "not circular" << endl;
 
     return 0;
 }
