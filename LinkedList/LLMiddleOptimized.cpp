@@ -1,4 +1,4 @@
-//Optimized solution For Middle Element
+// Optimized solution For Middle Element
 #include <bits/stdC++.h>
 using namespace std;
 class Node
