@@ -52,7 +52,7 @@ int main()
     node4->next = node5;
     node5->next = node3;
     // print(head);
-    cout << floyedCheck(head) << endl;
+    floyedCheck(head) ? cout<< "loop exist"<<endl : cout<<"loop not exists"<<endl;
 
     return 0;
 }
