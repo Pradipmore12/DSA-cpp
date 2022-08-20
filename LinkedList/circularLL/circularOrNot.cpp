@@ -1,4 +1,4 @@
-//Check LL is Circular Or NOT
+// Check LL is Circular Or NOT
 #include <bits/stdc++.h>
 using namespace std;
 class Node
