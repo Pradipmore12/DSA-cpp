@@ -37,12 +37,14 @@ Node *floyedCheck(Node *&head)
     }
     return 0;
 }
-Node *getStartNodeOfLoop(Node *&head){
-    Node *fast=floyedCheck(head);
-    Node *slow=head;
-    while(slow!=fast){
-        slow=slow->next;
-        fast=fast->next;
+Node *getStartNodeOfLoop(Node *&head)
+{
+    Node *fast = floyedCheck(head);
+    Node *slow = head;
+    while (slow != fast)
+    {
+        slow = slow->next;
+        fast = fast->next;
     }
     return slow;
 }
@@ -68,10 +70,10 @@ int main()
         cout<<"loop Exists and starts with :"<<floyedCheck(head)<<endl;
     }*/
 
-    //floyed Starting Node
+    // floyed Starting Node
 
-    Node *start=getStartNodeOfLoop(head);
-    cout<<"Loop starts at :"<<start->data<<endl;
+    Node *start = getStartNodeOfLoop(head);
+    cout << "Loop starts at :" << start->data << endl;
 
     return 0;
 }
