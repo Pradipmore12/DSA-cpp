@@ -32,14 +32,15 @@ int floyedCheck(Node *&head)
         slow = slow->next;
         if (slow == fast)
         {
-            slow=head;
-            while(slow!=NULL){
-                slow=slow->next;
-                fast=fast->next;
-                if(slow==fast){
+            slow = head;
+            while (slow != NULL)
+            {
+                slow = slow->next;
+                fast = fast->next;
+                if (slow == fast)
+                {
                     return slow->data;
                 }
-
             }
         }
     }
@@ -60,11 +61,13 @@ int main()
     node4->next = node5;
     node5->next = node2;
     // print(head);
-    if(floyedCheck(head)==0){
-        cout<<"loop does not exist"<<endl;
+    if (floyedCheck(head) == 0)
+    {
+        cout << "loop does not exist" << endl;
     }
-    else{
-        cout<<"loop Exists and starts with :"<<floyedCheck(head)<<endl;
+    else
+    {
+        cout << "loop Exists and starts with :" << floyedCheck(head) << endl;
     }
 
     return 0;
