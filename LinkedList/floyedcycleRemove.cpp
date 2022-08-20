@@ -21,7 +21,7 @@ void print(Node *&head)
     }
     cout << endl;
 }
-//Function to Check Floyed Loop Presence
+// Function to Check Floyed Loop Presence
 bool floyedCheck(Node *&head)
 {
     Node *slow = head;
@@ -38,7 +38,7 @@ bool floyedCheck(Node *&head)
     }
     return false;
 }
-//function To get Meet point of slow and fast
+// function To get Meet point of slow and fast
 Node *floyedMeetPoint(Node *&head)
 {
     Node *slow = head;
@@ -47,7 +47,8 @@ Node *floyedMeetPoint(Node *&head)
     while (fast != NULL && fast->next != NULL && slow != NULL)
     {
         fast = fast->next;
-        if(fast!=NULL){
+        if (fast != NULL)
+        {
             fast = fast->next;
         }
         slow = slow->next;
@@ -58,29 +59,32 @@ Node *floyedMeetPoint(Node *&head)
         }
     }
     return NULL;
-    
 }
 
-//Function to get start Node of Loop
+// Function to get start Node of Loop
 
-Node *getStartNodeOfLoop(Node *&head){
-    Node *fast=floyedMeetPoint(head);
-    Node *slow=head;
-    while(slow!=fast){
-        slow=slow->next;
-        fast=fast->next;
+Node *getStartNodeOfLoop(Node *&head)
+{
+    Node *fast = floyedMeetPoint(head);
+    Node *slow = head;
+    while (slow != fast)
+    {
+        slow = slow->next;
+        fast = fast->next;
     }
     return slow;
 }
 
-//Function to remove Floyed Loop
-void floyedRemove(Node *&head){
-    Node *start=getStartNodeOfLoop(head);
-    Node *temp=start;
-    while(temp->next!=start){
-        temp=temp->next;
+// Function to remove Floyed Loop
+void floyedRemove(Node *&head)
+{
+    Node *start = getStartNodeOfLoop(head);
+    Node *temp = start;
+    while (temp->next != start)
+    {
+        temp = temp->next;
     }
-    temp->next=NULL;
+    temp->next = NULL;
 }
 int main()
 {
@@ -97,38 +101,37 @@ int main()
     node4->next = node5;
     node5->next = node3;
     // print(head);
-    //check floyed Loop
-    if(floyedCheck(head)){
-         cout<<"loop Exists"<<endl;
-    }
-       
-    else{
-        cout<<"loop not exists"<<endl;
-
+    // check floyed Loop
+    if (floyedCheck(head))
+    {
+        cout << "loop Exists" << endl;
     }
 
-    Node *start=getStartNodeOfLoop(head);
-    cout<<start->data<<endl;
-    //Node *meet=floyedMeetPoint(head);
-    //cout<<meet->data<<endl;
-    
-    //remove loop from LL
-    
+    else
+    {
+        cout << "loop not exists" << endl;
+    }
+
+    Node *start = getStartNodeOfLoop(head);
+    cout << start->data << endl;
+    // Node *meet=floyedMeetPoint(head);
+    // cout<<meet->data<<endl;
+
+    // remove loop from LL
+
     floyedRemove(head);
     print(head);
-    
-    //check floyed loop
-    if(floyedCheck(head)){
-         cout<<"loop Exists"<<endl;
-    }
-       
-    else{
-        cout<<"Not exists"<<endl;
 
+    // check floyed loop
+    if (floyedCheck(head))
+    {
+        cout << "loop Exists" << endl;
     }
-        
-    
 
+    else
+    {
+        cout << "Not exists" << endl;
+    }
 
     return 0;
 }
