@@ -1,4 +1,4 @@
-//Middle Element By iterative method
+// Middle Element By iterative method
 #include <bits/stdC++.h>
 using namespace std;
 class Node
