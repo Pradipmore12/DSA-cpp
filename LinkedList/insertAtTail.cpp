@@ -36,12 +36,12 @@ void insertAtTail(Node *&tail, int data)
     tail->next = temp;
     tail = temp;
 }
-void selectionSort(Node *&head)
+void Sort(Node *&head)
 {
     Node *temp = head;
     while (temp != NULL)
     {
-        if (temp->data > temp->next->data)
+        if (temp->data > temp->next->data && temp->next !=NULL)
         {
             Node *sample = temp;
             temp = temp->next;
@@ -65,7 +65,7 @@ int main()
     insertAtTail(tail, 20);
     insertAtTail(tail, 50);
     insertAtTail(tail, 10);
-    selectionSort(head);
+    Sort(head);
     print(head);
 
     return 0;
