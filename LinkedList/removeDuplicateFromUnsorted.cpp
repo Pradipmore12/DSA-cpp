@@ -64,8 +64,8 @@ int main()
     insertAtTail(tail, 15);
     // print(head);
     insertAtTail(tail, 25);
-    insertAtTail(tail, 20);
-    insertAtTail(tail, 20);
+    insertAtTail(tail, 10);
+    insertAtTail(tail, 10);
     insertAtTail(tail, 30);
     print(head);
     removeDuplicate(head);
