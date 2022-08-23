@@ -36,6 +36,21 @@ void insertAtTail(Node *&tail, int data)
     tail->next = temp;
     tail = temp;
 }
+void removeDuplicate(Node *&head){
+    Node *temp=head;
+    while(temp!=NULL){
+        if(temp->next != NULL && temp->data == temp->next->data){
+            Node *next_next = temp->next->next;
+            delete temp->next;
+            temp->next = next_next;
+        }
+        else
+            temp = temp->next;
+        
+        
+    }
+    return;
+}
 int main()
 {
 
@@ -51,6 +66,8 @@ int main()
     insertAtTail(tail, 20);
     insertAtTail(tail, 20);
     insertAtTail(tail, 30);
+    print(head);
+    removeDuplicate(head);
     print(head);
 
     return 0;
