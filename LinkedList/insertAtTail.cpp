@@ -43,9 +43,9 @@ void Sort(Node *&head)
     {
         if (temp->data > temp->next->data && temp->next !=NULL)
         {
-            Node *sample = temp;
-            temp = temp->next;
-            temp->next = sample;
+            int sample = temp->data;
+            temp->data = temp->next->data;
+            temp->next->data = sample;
         }
         temp = temp->next;
     }
