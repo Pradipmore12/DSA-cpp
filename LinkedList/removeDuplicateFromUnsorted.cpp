@@ -41,32 +41,35 @@ void removeDuplicate(Node *&head)
     Node *temp = head;
     while (temp != NULL)
     {
-        if (temp->next != NULL && temp->data == temp->next->data)
-        {
-            Node *next_next = temp->next->next;
-            delete temp->next;
-            temp->next = next_next;
+        Node *curr=head;
+        while(curr->next!=NULL){
+            if(curr->next->data==temp->data){
+                curr->next=curr->next->next;
+
+            }
+            curr=curr->next;
         }
-        else
-            temp = temp->next;
+
+
+        temp=temp->next;
     }
     return;
 }
 int main()
 {
 
-    Node *node1 = new Node(15);
+    Node *node1 = new Node(10);
     Node *head = node1;
     Node *tail = node1;
 
-    insertAtHead(head, 10);
+    insertAtHead(head, 15);
     // print(head);
     insertAtTail(tail, 15);
     // print(head);
     insertAtTail(tail, 25);
     insertAtTail(tail, 10);
-    insertAtTail(tail, 10);
     insertAtTail(tail, 30);
+    insertAtTail(tail, 10);
     print(head);
     removeDuplicate(head);
     print(head);
