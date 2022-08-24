@@ -11,6 +11,10 @@ public:
         this->data = data;
         this->next = NULL;
     }
+    ~ Node(){
+        delete this;
+
+    }
 };
 
 void print(Node *&head)
@@ -41,13 +45,17 @@ void removeDuplicate(Node *&head)
     Node *temp = head;
     while (temp != NULL)
     {
-        Node *curr=head;
-        while(curr->next!=NULL){
-            if(curr->next->data==temp->data){
-                curr->next=curr->next->next;
-
+        Node *next=temp->next;
+        Node *prev=temp;
+        while(next!=NULL){
+            if(next->data==temp->data){
+                Node *next_next=next->next;
+                prev->next=next_next;
             }
-            curr=curr->next;
+
+                next=next->next;
+                prev=prev->next;
+
         }
 
 
