@@ -70,7 +70,7 @@ int main()
     Node *node1 = new Node(10);
     Node *head = node1;
     Node *tail = node1;
-    Node *node2 = new Node(20);
+    /*Node *node2 = new Node(20);
     Node *node3 = new Node(10);
     Node *node4 = new Node(10);
     Node *node5 = new Node(15);
@@ -81,19 +81,19 @@ int main()
     node3->next = node4;
     node4->next = node5;
     node5->next = node6;
-    node6->next = node7;
+    node6->next = node7;*/
 
-    // insertAtHead(head, 15);
-    //  print(head);
-    // insertAtTail(tail, 15);
-    //  print(head);
-    // insertAtTail(tail, 25);
-    // insertAtTail(tail, 10);
-    // insertAtTail(tail, 30);
-    // insertAtTail(tail, 10);
+     insertAtHead(head, 15);
+    //print(head);
+     insertAtTail(tail, 15);
+      //(head);
+     insertAtTail(tail, 25);
+     insertAtTail(tail, 10);
+     insertAtTail(tail, 30);
+     insertAtTail(tail, 10);
     print(head);
     Node *head2 = removeDuplicate(head);
-    print(head2);
+    print(head);
 
     return 0;
 }
