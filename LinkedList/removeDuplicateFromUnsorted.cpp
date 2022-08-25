@@ -11,10 +11,10 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    ~ Node(){
-        cout<<"data deleted"<<endl;
+    ~Node()
+    {
+        cout << "data deleted" << endl;
     }
-       
 };
 
 void print(Node *&head)
@@ -45,20 +45,22 @@ Node *removeDuplicate(Node *&head)
     Node *temp = head;
     while (temp != NULL && temp->next != NULL)
     {
-        Node *iterator=temp->next;
-        while(iterator->next!=NULL){
-            if(iterator->next->data == temp->data){
-                Node *store=iterator->next;
+        Node *iterator = temp->next;
+        while (iterator->next != NULL)
+        {
+            if (iterator->next->data == temp->data)
+            {
+                Node *store = iterator->next;
                 iterator->next = iterator->next->next;
                 delete store;
-                
             }
-            else{
-                iterator=iterator->next;
+            else
+            {
+                iterator = iterator->next;
             }
         }
 
-        temp=temp->next;
+        temp = temp->next;
     }
     return head;
 }
@@ -74,22 +76,21 @@ int main()
     Node *node5 = new Node(15);
     Node *node6 = new Node(10);
     Node *node7 = new Node(25);
-    node1->next=node2;
-    node2->next=node3;
-    node3->next=node4;
-    node4->next=node5;
-    node5->next=node6;
-    node6->next=node7;
-    
+    node1->next = node2;
+    node2->next = node3;
+    node3->next = node4;
+    node4->next = node5;
+    node5->next = node6;
+    node6->next = node7;
 
-    //insertAtHead(head, 15);
-    // print(head);
-    //insertAtTail(tail, 15);
-    // print(head);
-    //insertAtTail(tail, 25);
-    //insertAtTail(tail, 10);
-    //insertAtTail(tail, 30);
-    //insertAtTail(tail, 10);
+    // insertAtHead(head, 15);
+    //  print(head);
+    // insertAtTail(tail, 15);
+    //  print(head);
+    // insertAtTail(tail, 25);
+    // insertAtTail(tail, 10);
+    // insertAtTail(tail, 30);
+    // insertAtTail(tail, 10);
     print(head);
     Node *head2 = removeDuplicate(head);
     print(head2);
