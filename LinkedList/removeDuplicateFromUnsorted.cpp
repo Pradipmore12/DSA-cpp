@@ -46,15 +46,16 @@ void removeDuplicate(Node *&head)
     while (temp != NULL)
     {
         Node *next=temp->next;
-        Node *prev=temp;
+        //Node *prev=temp;
         while(next!=NULL){
             if(next->data==temp->data){
-                Node *next_next=next->next;
-                prev->next=next_next;
+                delete next;
+            }
+            else{
+                next=next->next;
             }
 
-                next=next->next;
-                prev=prev->next;
+                
 
         }
 
