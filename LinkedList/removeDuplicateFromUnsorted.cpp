@@ -83,14 +83,14 @@ int main()
     node5->next = node6;
     node6->next = node7;*/
 
-     insertAtHead(head, 15);
-    //print(head);
-     insertAtTail(tail, 15);
-      //(head);
-     insertAtTail(tail, 25);
-     insertAtTail(tail, 10);
-     insertAtTail(tail, 30);
-     insertAtTail(tail, 10);
+    insertAtHead(head, 15);
+    // print(head);
+    insertAtTail(tail, 15);
+    //(head);
+    insertAtTail(tail, 25);
+    insertAtTail(tail, 10);
+    insertAtTail(tail, 30);
+    insertAtTail(tail, 10);
     print(head);
     Node *head2 = removeDuplicate(head);
     print(head);
