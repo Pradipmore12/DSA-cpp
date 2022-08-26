@@ -1,3 +1,4 @@
+//remove dupl from sorted Linked List
 #include <bits/stdc++.h>
 using namespace std;
 class Node
