@@ -25,7 +25,7 @@ void conquer(int arr[], int si, int mid, int ei)
             startIndexOfMergedArray++;
         }
     }
-    //loop for if there are remaining elements in First Array
+    // loop for if there are remaining elements in First Array
     while (startIndexOfFirstArray <= mid)
     {
         merged[startIndexOfMergedArray] = arr[startIndexOfFirstArray];
@@ -33,7 +33,7 @@ void conquer(int arr[], int si, int mid, int ei)
         startIndexOfMergedArray++;
     }
 
-    //loop for if there are remaining elements in First Array
+    // loop for if there are remaining elements in First Array
     while (startIndexOfSecondArray <= ei)
     {
         merged[startIndexOfMergedArray] = arr[startIndexOfSecondArray];
@@ -56,12 +56,12 @@ void meregSortdivide(int arr[], int si, int ei)
     {
         return;
     }
-    int mid = si+(ei - si) / 2;
+    int mid = si + (ei - si) / 2;
     meregSortdivide(arr, si, mid);
     meregSortdivide(arr, mid + 1, ei);
     conquer(arr, si, mid, ei);
 }
-//main start
+// main start
 int main()
 {
     int arr[] = {5, 1, 4, 3, 2};
