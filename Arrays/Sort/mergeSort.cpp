@@ -54,7 +54,7 @@ void meregSortdivide(int arr[], int si, int ei)
     {
         return;
     }
-    int mid = (si + ei) / 2;
+    int mid = si+(ei - si) / 2;
     meregSortdivide(arr, si, mid);
     meregSortdivide(arr, mid + 1, ei);
     conquer(arr, si, mid, ei);
