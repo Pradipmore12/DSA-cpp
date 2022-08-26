@@ -41,17 +41,18 @@ void selectionSort(Node *&head)
     Node *prev = head;
     while (prev->next != NULL)
     {
-        Node *next=prev->next;
-        while(next!=NULL){
-            if(prev->data > next->data){
-                int temp=prev->data;
-                prev->data=next->data;
-                next->data=temp;
-
+        Node *next = prev->next;
+        while (next != NULL)
+        {
+            if (prev->data > next->data)
+            {
+                int temp = prev->data;
+                prev->data = next->data;
+                next->data = temp;
             }
-            next=next->next;
+            next = next->next;
         }
-        prev=prev->next;
+        prev = prev->next;
     }
     return;
 }
