@@ -39,7 +39,6 @@ void insertAtTail(Node *&tail, int data)
 }
 void mergeSort(Node *&head)
 {
-    
 }
 int main()
 {
