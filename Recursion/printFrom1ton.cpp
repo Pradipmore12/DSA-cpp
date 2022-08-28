@@ -5,7 +5,7 @@ void print()
 {
     if (cnt == 11)
         return;
-    cout <<cnt<<" ";
+    cout << cnt << " ";
     cnt++;
     print();
 }
