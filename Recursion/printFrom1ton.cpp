@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-int cnt = 5;
-void print()
+void print(int i, int n)
 {
-    if (cnt == 0)
+    if (i > n)
         return;
-    cout << cnt << " ";
-    cnt--;
-    print();
+    print(i + 1, n);
+    cout << i << endl;
 }
 int main()
 {
-    print();
+    int n;
+    cin >> n;
+    print(1, n);
     return 0;
 }
