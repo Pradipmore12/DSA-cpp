@@ -1,4 +1,4 @@
-// sort Linked List using slection Sort
+// sort Linked List using slection Sort technique
 #include <bits/stdc++.h>
 using namespace std;
 class Node
