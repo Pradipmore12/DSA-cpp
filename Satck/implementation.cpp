@@ -11,12 +11,12 @@ class Stack{
         arr=new int[size];
     }
     void push(int data){
-        if(top>=size){
-            top++;
-            arr[top]=data;
+        if(top>=size-1){
+           cout<<"stack overflow"<<endl; 
         }
         else
-            cout<<"stack overflow"<<endl;
+            top++;
+            arr[top]=data;
         
     }
     void pop(){
@@ -36,6 +36,13 @@ class Stack{
         else{
             return arr[top];
         }
+    }
+    bool empty(){
+        if(top==-1){
+            return 1;
+        }
+        else
+            return 0; 
     }
 
 };
