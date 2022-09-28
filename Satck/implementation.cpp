@@ -24,7 +24,7 @@ class Stack{
             cout<<"stack underflow"<<endl;
         }
         else{
-            cout<<"popped element is :"<<arr[top];
+            cout<<"popped element is :"<<arr[top]<<endl;
             top--;
         }
         
@@ -52,16 +52,11 @@ int main(){
     s1.push(4);
     s1.push(5);
     s1.push(6);
-    s1.push(7);
     cout<<s1.peek()<<endl;
     s1.pop();
-    cout<<s1.peek()<<endl;
-    s1.pop();
-    s1.pop();
-    cout<<s1.peek()<<endl;
-    s1.pop();
-    s1.pop();
-    s1.pop();
+     cout<<s1.peek()<<endl;
+    s1.empty() ? cout<<"stack is empty"<<endl :cout<<"stack is nt empty"<<endl;
+    
 
 
 
