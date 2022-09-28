@@ -1,29 +1,19 @@
-using namespace std;
-#include <iostream>
-int main()
-{
-    int n, q, r;
-    cin >> n;
-    string binary = "";
-    int arr[n];
-    while (q != 0)
-    {
-        q = n / 2;
-        r = n % 2;
-        int i = 0;
-        arr[i] = r;
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int a[10], n, i;    
+cout<<"Enter the number to convert: ";    
+cin>>n;    
+for(i=0; n>0; i++)    
+{    
+a[i]=n%2;    
 
-        // cout<<r<<"";
-        // string b=(r);
-        // binary+=b;
-        n = q;
-        q = n;
-        i++;
-    }
-    for (int i = 0; i <= n; i++)
-    {
-        cout << arr[i];
-    }
-
-    return 0;
-}
+n= n/2;  
+}    
+cout<<"Binary of the given number= ";    
+for(i=i-1 ;i>=0 ;i--)    
+{    
+cout<<a[i];    
+}    
+} 
